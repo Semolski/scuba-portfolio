@@ -14,9 +14,9 @@
     "stripe": "^8.39.0"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
     "autoprefixer": "^9.7.0",
     "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^8.0.0",

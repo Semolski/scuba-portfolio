@@ -1,0 +1,185 @@
+//fonts
+$font_0: monospace;
+
+html {
+    line-height: 1.15;
+}
+body {
+    margin: 0;
+}
+main {
+    display: block;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+hr {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+pre {
+    font-family: $font_0, $font_0;
+    font-size: 1em;
+}
+a {
+    background-color: transparent;
+}
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline dotted;
+}
+b {
+    font-weight: bolder;
+}
+strong {
+    font-weight: bolder;
+}
+code {
+    font-family: $font_0, $font_0;
+    font-size: 1em;
+}
+kbd {
+    font-family: $font_0, $font_0;
+    font-size: 1em;
+}
+samp {
+    font-family: $font_0, $font_0;
+    font-size: 1em;
+}
+small {
+    font-size: 80%;
+}
+sub {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    bottom: -0.25em;
+}
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.5em;
+}
+img {
+    border-style: none;
+}
+button {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    &:-moz-focusring {
+        outline: 1px dotted ButtonText;
+    }
+}
+input {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    overflow: visible;
+}
+optgroup {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+select {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    text-transform: none;
+}
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    overflow: auto;
+}
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+[type="button"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+[type="reset"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+legend {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+progress {
+    vertical-align: baseline;
+}
+[type="checkbox"] {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    padding: 0;
+}
+[type="radio"] {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button {
+    height: auto;
+}
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+[type="search"] {
+    outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+}
+::-webkit-file-upload-button {
+    font: inherit;
+}
+details {
+    display: block;
+}
+summary {
+    display: list-item;
+}
+template {
+    display: none;
+}
+[hidden] {
+    display: none;
+}
+[type="button"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+[type="reset"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}

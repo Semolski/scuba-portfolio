@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<!--File was changed from html to ejs because it is templating language-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--The next three lines are for SEO -->
+    <meta name="description" content="World's first subscription service for the traveling diver.">
+    <meta name="keywords" content="scuba, diver, diving, subscription, service, luxury, travel, adventure, dive trips">
+    <meta name="author" content="Sarah Mayoral-Osmolski">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uncharted Waters | Subscriptions</title>
+    <link href="https://fonts.googleapis.com/css?family=Kalam:300,400|Titillium+Web&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+    <script>
+        var stripePublicKey = '<%= stripePublicKey %>'
+    </script>
+    <script src="store.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+<header class="v-header container">
+    <div class="sub-half-wrap">
+        <!--<img src="./img/japan.png" alt="japan ocean">-->
+    </div>
+    <div class="nav-container">
+        <div id="branding">
+            <h1><a href="index.html">Uncharted Waters</a></h1> <!--Important for SEO. Cannot hide h1 tag either or there will be a penalty-->
+        </div>
+        <nav>
+            <ul>
+                <li class="current"><a href="subscriptions">Subscriptions</a></li>
+                <li><a href="#" id="contact-link-id" class="contact-link">Contact</a></li>
+<!--                <div id="myModal" class="modal">
+                    &lt;!&ndash;Modal Code JS&ndash;&gt;
+                </div>-->
+            </ul>
+        </nav>
+    </div>
+    <section id="sub-showcase">
+        <div class="showcase-container">
+            <h2 class="coolshadow">Join the adventure.</h2><!--Can only have ONE h1 tag per page-->
+            <p class="showcase-desc coolshadow">Travel on demand to over 500 beautiful destinations.</p>
+            <a class="sub-button" href="#sub-intro-start"></a>
+        </div>
+    </section>
+    <p class="container content-section photo-cred">Photo by Marek Okon on Unsplash</p>
+</header>
+
+<!--<section id="newsletter">
+    <div class="container">
+&lt;!&ndash;        <h2>Subscribe to Our Newsletter</h2>
+        <form action="">
+            &lt;!&ndash;                fix the input&ndash;&gt;
+            <label>
+                <input type="email" placeholder="Enter Email...">
+            </label>
+            <button type="submit" class="button_1">Subscribe</button>
+        </form>&ndash;&gt;
+    </div>
+</section>-->
+
+
+        <section class="container content-section sub-intro" id="sub-intro-start">
+
+            <h1 class="section-header" >Introducing Uncharted Monthly Subscriptions</h1> <!--should this be h1?-->
+                <div class="subscriptions light">
+                    <div class="intro1">
+                        <h3>Browse.</h3>
+                        <p>Browse our list of hundreds of trips over the next 12 months, with new trips added daily.</p>
+                    </div>
+                    <div class="intro2">
+                        <h3>Book.</h3>
+                        <p>Reserve any trip, booking seven to 365 days in advance.</p>
+                    </div>
+                    <div class="intro3">
+                        <h3>Adventure.</h3>
+                        <p>Visit an Uncharted Waters destination and enjoy all the accomodations included.</p>
+                    </div>
+                    <div class="intro4">
+                        <h3>Repeat.</h3>
+                        <p>Book your next trip the day you check out. Explore somewhere new or return to your favorite.</p>
+                    </div>
+                </div>
+            <div class="sub-now-section coolshadow">
+                <a class="sub-now" href="#sub-now">Subscribe Now</a>
+            </div>
+        </section>
+
+        <section class="container content-section sub-card-details">
+        <div class="container store-products">
+            <div class="sub-details sub-details-top">
+                <div class="sub-details-header">
+                    <h2>Customize your journey.</h2>
+                    <p>Start by choosing the subscription service right for you.</p>
+                </div>
+                <div class="light">
+                    <div class="sub-details-box-1">
+                        <div class="sub-details-box-head">The Vagabond</div>
+                        <div class="sub-details-price">$2,500/change monthly</div>
+                        <p>For the traveling diver.</p>
+                        <p>12-month subscription</p>
+                        <div class="sub-details-btn coolshadow">
+                            <a href="#" class="contact-link">Request more information</a>
+                        </div>
+                    </div>
+                    <div class="sub-details-box-2">
+                        <div class="sub-details-box-head">The Jet-setter</div>
+                        <div class="sub-details-price">$3500/charged monthly</div>
+                        <p>The ultimate package.</p>
+                        <p>12-month subscription</p>
+                        <div class="sub-details-btn coolshadow">
+                            <a href="#" class="contact-link">Request more information</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sub-details sub-details-bottom">
+                <div class="sub-details-header">
+                    <h2>Addons</h2>
+                    <p>Expand the expierence with our addons.</p>
+                </div>
+                <div class="light">
+                    <div class="sub-details-box-3">
+                        <div class="sub-details-box-head">The Daredevil</div>
+                        <div class="sub-details-price">$250/charged monthly</div>
+                        <p>For those not afraid to take risks.</p>
+                        <p>12-month subscription</p>
+                        <div class="sub-details-btn coolshadow">
+                            <a href="#" class="contact-link">Request more information</a>
+                        </div>
+                    </div>
+                    <div class="sub-details-box-4">
+                        <div class="sub-details-box-head">The Sightseer</div>
+                        <div class="sub-details-price">$350/charged monthly</div>
+                        <p>Top destinations on every diver's bucket list.</p>
+                        <p>12-month subscription</p>
+                        <div class="sub-details-btn coolshadow">
+                            <a href="#" class="contact-link">Request more information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <section class="container content-section sub-store-details" id="sub-now">
+     <div class="sub-details-header">
+         <h2>Why wait? Subscribe now and begin your journey today!</h2>
+     </div>
+     <% items.subscriptions.forEach(function(item){ %> <!--All the code inside these tags will be executed on server before it is sent to the front end client -->
+     <div class="store-product" data-item-id="<%= item.id %>">
+         <span class="store-product-name"><%= item.name %></span>
+         <div class="store-product-info">
+             <span class="store-product-price">$<%= item.price /100 %></span>
+             <button class="store-product-btn coolshadow">Subscribe</button>
+         </div>
+     </div>
+     <% }) %>
+     <!--        <div class="store-product">
+                 <span class="store-product-name">The Jet-setter</span>
+                 <div class="store-product-info">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, molestiae.</p>
+                     <span class="store-product-price">$3500</span>
+                     <button class="btn btn-primary store-product-btn">Subscribe</button>
+                 </div>
+             </div>-->
+     <% items.addons.forEach(function(item){ %> <!--All the code inside these tags will be executed on server before it is sent to the front end client -->
+     <div class="store-product" data-item-id="<%= item.id %>">
+         <span class="store-product-name"><%= item.name %></span>
+         <div class="store-product-info">
+             <span class="store-product-price">$<%= item.price /100 %></span>
+             <button class=" store-product-btn coolshadow">Subscribe</button>
+         </div>
+     </div>
+     <% }) %>
+     <!--        <div class="store-product">
+                 <span class="store-product-name">The Daredevil</span>
+                 <div class="store-product-info">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, molestiae.</p>
+                     <span class="store-product-price">$250</span>
+                     <button class="btn btn-primary store-product-btn">Subscribe</button>
+                 </div>
+             </div>
+             <div class="store-product">
+                 <span class="store-product-name">The Sightseer</span>
+                 <div class="store-product-info">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, molestiae.</p>
+                     <span class="store-product-price">$250</span>
+                     <button class="btn btn-primary store-product-btn">Subscribe</button>
+                 </div>
+             </div>-->
+
+     <!--        <aside id="sidebar">
+                 <div class="light">
+                     <h3>Ways to Explore</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quasi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, soluta.</p>
+                 </div>
+             </aside>-->
+<!--     </div>-->
+ </section>
+<section class="container content-section cart-section">
+    <h2 class="store-heading section-header">Cart</h2>
+<div class="cart-row">
+    <span class="product-purchase store-heading purchase-column">Item</span>
+    <span class="purchase-price store-heading purchase-column">Price</span>
+    <span class="purchase-amount store-heading purchase-column">Quantity</span>
+</div>
+<div class="products-purchase">
+<!--    <div class="cart-row">-->
+<!--        <div class="product-purchase cart-col">-->
+<!--            <span class="product-purchase-name">#</span>-->
+<!--        </div>-->
+<!--        <span class="purchase-price cart-col">$</span>-->
+<!--        <div class="purchase-amount cart-col">-->
+<!--            <label>-->
+<!--                <input class="purchase-amount-input" type="number" value="">-->
+<!--            </label>-->
+<!--            <button class="btn-remove">Remove</button>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+<div class="purchase-total">
+    <span class="class-total-title">Total</span>
+    <span class="purchase-total-price">$0</span>
+</div>
+<button class="btn btn-primary btn-purchase coolshadow">Purchase</button>
+</section>
+<footer>
+    <p>Uncharted Waters LLC, Copyright &copy; 2020</p>
+</footer>
+</body>
+</html>

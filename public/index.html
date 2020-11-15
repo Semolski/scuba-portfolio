@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--The next three lines are for SEO -->
+    <meta name="description" content="World's first subscription service for the traveling diver.">
+    <meta name="keywords" content="scuba, diver, diving, subscription, service, luxury, travel, adventure, dive trips">
+    <meta name="author" content="Sarah Mayoral-Osmolski">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uncharted Waters | Welcome</title>
+    <link href="https://fonts.googleapis.com/css?family=Kalam:300,400|Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/style.css?cb=1588210044255">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+<header class="v-header container">
+    <div class="half-video-wrap">
+        <video src="./videos/export1.mp4" playsinline autoplay muted loop></video>
+    </div>
+    <div class="header-overlay">
+    </div>
+    <div class="nav-container">
+        <div id="branding">
+            <h1><a href="../public/index.html">Uncharted Waters</a></h1>
+            <!--Important for SEO. Cannot hide h1 tag either or there will be a penalty-->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="subscriptions">Subscriptions</a></li>
+                <li><a href="#" id="contact-link-id" class="contact-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section id="showcase">
+        <div class="showcase-container homepage">
+            <h2 class="coolshadow">Explore the uncharted.</h2><!--Can only have ONE h1 tag per page-->
+            <p class="showcase-desc coolshadow">The world’s first subscription service for the traveling diver.</p>
+            <button class="cta-btn coolshadow"><a href=#sub-boxes>Start Exploring</a></button>
+        </div>
+    </section>
+</header>
+<section id="newsletter">
+    <div class="container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form action="">
+            <!--                fix the input-->
+            <label>
+                <input type="email" placeholder="Enter Email...">
+            </label>
+            <button id="newsletter_button" type="submit" class="button_1">Subscribe</button>
+        </form>
+    </div>
+</section>
+<section id="sub-boxes">
+    <div class="container">
+        <div class="col-1">
+            <div class="sub-box">
+                <img src="./img/aqualung.png" alt="scuba diver">
+                <h3>The Vagabond</h3>
+                <p>For the casual or professional diver, let us help you explore the uncharted waters.</p>
+            </div>
+            <div class="sub-box-desc">
+                <ul>
+                    <li>2 First Class Flights each month</li>
+                    <li>500 destinations to choose from</li>
+                    <li>Daredevil and Sightseer add on included</li>
+                    <li>5-Star Accommodations</li>
+                    <li>Transportation included</li>
+                    <li>Driving fees included</li>
+                    <li>Gear rental included</li>
+                </ul>
+                <button class="learn-btn"><a href="subscriptions">Learn More</a></button>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sub-box">
+                <img src="./img/treasure-chest.png" alt="scuba diver">
+                <h3>The Jet-setter</h3>
+                <p>Travel to the top dive destinations in luxury and we'll take care of the details.</p>
+            </div>
+            <div class="sub-box-desc">
+                <ul>
+                    <li>2 Economy Flights per month</li>
+                    <li>3-Star to 4-Star Accommodations</li>
+                    <li>400 destinations to choose from</li>
+                    <li>Luggage fees (includes fees for gear)</li>
+                    <li>A voucher for oxygen tank refills</li>
+                    <li>Full size truck rental to haul gear easily</li>
+                    <li>Includes diving fees</li>
+                </ul>
+                <button class="learn-btn"><a href="subscriptions">Learn More</a></button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer>
+    <p>Uncharted Waters LLC, Copyright &copy; 2020</p>
+</footer>
+</body>
+</html>
